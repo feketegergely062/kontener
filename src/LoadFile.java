@@ -21,6 +21,7 @@ public class LoadFile {
             ArrayList<Employee>employeeList = new ArrayList<>();
             File file = new File("kontenerkft.txt");
             Scanner scanner = new Scanner(file,"utf-8");
+            
             while(scanner.hasNext()){
                 String line = scanner.nextLine();
                 String[] lineArray = line.split("#");
