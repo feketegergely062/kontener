@@ -5,9 +5,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LoadFile {
-    public LoadFile(){
+   
+        static final String FILE_NAME = "kontenerkft.txt";
 
-    }
+        public LoadFile(){
+
+        }
+            
+        
+    
     public static ArrayList<Employee> load(){
         ArrayList<Employee>employeeList = null;
         try {
@@ -19,9 +25,9 @@ public class LoadFile {
     }
         public static  ArrayList<Employee> tryload() throws FileNotFoundException{
             ArrayList<Employee>employeeList = new ArrayList<>();
-            File file = new File("kontenerkft.txt");
+            File file = new File(FILE_NAME);
             Scanner scanner = new Scanner(file,"utf-8");
-            
+
             while(scanner.hasNext()){
                 String line = scanner.nextLine();
                 String[] lineArray = line.split("#");
@@ -47,4 +53,5 @@ public class LoadFile {
         }
     
     
-}
+    }
+
